@@ -47,7 +47,7 @@
     }
     /* following are the CCS snippets for formatting the drop out menu */
     .sidepanel {
-      height: 250px;
+      height: 100%;
       width: 0;
       position: fixed;
       z-index: 1;
@@ -77,7 +77,7 @@
       margin-left: 50px;
       cursor: pointer;
     }
-    .openbtn {
+    /* .openbtn {
       font-size: 20px;
       cursor: pointer;
       background-color: #111;
@@ -85,7 +85,22 @@
       padding: 10px 15px;
       border: none;
       margin: 10px;
+      transition: 0.3s;
+    } */
+
+    .openbtn {
+      position: fixed;
+      top: 10px;           
+      left: 10px;         
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      transition: 0.3s;
     }
+
     .openbtn:hover {
       background-color: #444;
     }
