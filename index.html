@@ -19,13 +19,15 @@
   <style>
     body {
       background-color: rgb(189, 237, 255);
-    }
-    text {
       font-family: 'Open Sans', sans-serif;
       max-width: 800px;
       margin: auto;
       padding: 2em;
       line-height: 1.6;
+    }
+    text {
+      max-width: 800px;
+      margin: auto;
     }
     .content {
       background: #ffffff;
@@ -131,28 +133,31 @@
 <!-- defines the start of the main body of the webpage -->
 <body>
 
-  <div id="mySidepanel" class="sidepanel">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- defines the close button, java bit says the link doesn't redirect, class is formatting for the close button, closeNAV is the java for animating the window -->
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="research.html">Research</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">Contact</a>
-  </div>
+<div class="banner"></div>
 
-  <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
 
-  <script>
-    function openNav() {
-      document.getElementById("mySidepanel").style.width = "250px";
-    }
-    function closeNav() {
-      document.getElementById("mySidepanel").style.width = "0";
-    }
-  </script>
-
-  <div class="banner"></div>
   <text>
+
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- defines the close button, java bit says the link doesn't redirect, class is formatting for the close button, closeNAV is the java for animating the window -->
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+
   <!-- defines a section, in this case the first section with titles/photos, styled using the .section ccs to put in in a box -->
     <div class="section">
 
