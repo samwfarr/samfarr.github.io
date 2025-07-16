@@ -98,12 +98,16 @@
     }
 
     .banner {
-      background-image: url("https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1.jpg");
-      height: 400px; /* Set height here */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh; /* Full screen height */
+      background-image: url("https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      width: 100%;
+      z-index: -1; /* Push the banner behind everything */
     }
   </style>
 </head>
