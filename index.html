@@ -18,7 +18,7 @@
   <!-- defines internal CCS styling, can be combined, say a section of webpage styled by body, with an internal heading coloured by <h1> or 'heading 1' -->
   <style>
     body {
-      background-color: rgb(189, 237, 255);
+      background-color: #008080;
       font-family: 'Open Sans', sans-serif;
       max-width: 800px;
       margin: auto;
@@ -125,6 +125,13 @@
       background-repeat: no-repeat;
       z-index: -1; /* Push the banner behind everything */
     }
+    .backgroundimage {
+      background-image: url('https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
   </style>
 </head>
 <!-- above sections are just closing the style and head sections -->
@@ -133,8 +140,7 @@
 <!-- defines the start of the main body of the webpage -->
 <body>
 
-<div class="banner"></div>
-
+  <div class="backgroundimage"></div>
 
   <text>
 
