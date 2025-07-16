@@ -18,16 +18,27 @@
   <!-- defines internal CCS styling, can be combined, say a section of webpage styled by body, with an internal heading coloured by <h1> or 'heading 1' -->
   <style>
     body {
-      background-color: #008080;
+      /* background-color: #008080;
       font-family: 'Open Sans', sans-serif;
       max-width: 800px;
       margin: auto;
       padding: 2em;
+      line-height: 1.6; */
+
+      font-family: 'Open Sans', sans-serif;
       line-height: 1.6;
+      background-image: url('https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 2em;
     }
     .text {
       max-width: 800px;
       margin: auto;
+      background-color: rgba(255, 255, 255, 0.95);
     }
     .content {
       background: #ffffff;
@@ -112,26 +123,6 @@
     .openbtn:hover {
       background-color: #444;
     }
-
-    .banner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh; /* Full screen height */
-      background-image: url("https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: -1; /* Push the banner behind everything */
-    }
-    .backgroundimage {
-      background-image: url('https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
   </style>
 </head>
 <!-- above sections are just closing the style and head sections -->
@@ -139,8 +130,6 @@
 
 <!-- defines the start of the main body of the webpage -->
 <body>
-
-  <div class="backgroundimage"></div>
 
   <div class="text">
 
