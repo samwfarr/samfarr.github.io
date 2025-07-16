@@ -18,12 +18,14 @@
   <!-- defines internal CCS styling, can be combined, say a section of webpage styled by body, with an internal heading coloured by <h1> or 'heading 1' -->
   <style>
     body {
+      background-color: rgb(189, 237, 255);
+    }
+    text {
       font-family: 'Open Sans', sans-serif;
       max-width: 800px;
       margin: auto;
       padding: 2em;
       line-height: 1.6;
-      background-color: #f4f4f4;
     }
     .content {
       background: #ffffff;
@@ -150,62 +152,65 @@
   </script>
 
   <div class="banner"></div>
-
+  <text>
   <!-- defines a section, in this case the first section with titles/photos, styled using the .section ccs to put in in a box -->
-  <div class="section">
+    <div class="section">
 
-    <!-- add photo from github, formatted using .photo ccs - need to remember to point towards to raw content on github, otherwise just points to github webpage that happens to display the image -->
-    <img src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/PXL_20250706_105218832.jpg" alt="Image of Sam Farr in a field" class="photo">
+      <!-- add photo from github, formatted using .photo ccs - need to remember to point towards to raw content on github, otherwise just points to github webpage that happens to display the image -->
+      <img src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/PXL_20250706_105218832.jpg" alt="Image of Sam Farr in a field" class="photo">
 
-    <!-- main heading of my name, formatted with h1 ccs colouring -->
-    <h1>Sam Farr</h1>
-    <!-- defined new paragraph that's strong/bold to highlight the text -->
-    <p><strong>Postgraduate Researcher, Department of Physics Space and Planetary Physics</strong></p>
-    <!-- adds text showing my email, href is the actual link to open the email in a mail app, the text show is just after it, <a> is an anchor tab that creates a hyperlink -->
-    <p>Email: <a href="mailto:s.farr1@lancaster.ac.uk">s.farr1@lancaster.ac.uk</a></p>
-    <p>Lancaster University Website: <a href="https://www.lancaster.ac.uk/physics/about-us/people/sam-farr">https://www.lancaster.ac.uk/physics/about-us/people/sam-farr</a></p>
-    <p>Orcid Profile: <a href="https://orcid.org/0009-0007-7160-8848">https://orcid.org/0009-0007-7160-8848</a></p>
-  </div>
+      <!-- main heading of my name, formatted with h1 ccs colouring -->
+      <h1>Sam Farr</h1>
+      <!-- defined new paragraph that's strong/bold to highlight the text -->
+      <p><strong>Postgraduate Researcher, Department of Physics Space and Planetary Physics</strong></p>
+      <!-- adds text showing my email, href is the actual link to open the email in a mail app, the text show is just after it, <a> is an anchor tab that creates a hyperlink -->
+      <p>Email: <a href="mailto:s.farr1@lancaster.ac.uk">s.farr1@lancaster.ac.uk</a></p>
+      <p>Lancaster University Website: <a href="https://www.lancaster.ac.uk/physics/about-us/people/sam-farr">https://www.lancaster.ac.uk/physics/about-us/people/sam-farr</a></p>
+      <p>Orcid Profile: <a href="https://orcid.org/0009-0007-7160-8848">https://orcid.org/0009-0007-7160-8848</a></p>
+    </div>
 
-  <div class="section">
-    <h2>About Me</h2>
-    <p>
-      Auroral emissions and magnetospheric structure. Investigating outer aurorae at Saturn - their dynamics and occurrence with respect to injection signatures in ultraviolet aurorae and ENA. Additionally, I am investigating PPO signatures in southern hemisphere using data gathered during Cassini 'Grand Finale' orbits.
-    </p>
-    <p>  
-      Auroral research involved Cassini UVIS and MMI/INCA instrument usage, with potential for comparison to limited CAPS/ELS electron measurements. PPO investigation uses MAG instrument.
-    </p>
-  </div>
+    <div class="section">
+      <h2>About Me</h2>
+      <p>
+        Auroral emissions and magnetospheric structure. Investigating outer aurorae at Saturn - their dynamics and occurrence with respect to injection signatures in ultraviolet aurorae and ENA. Additionally, I am investigating PPO signatures in southern hemisphere using data gathered during Cassini 'Grand Finale' orbits.
+      </p>
+      <p>  
+        Auroral research involved Cassini UVIS and MMI/INCA instrument usage, with potential for comparison to limited CAPS/ELS electron measurements. PPO investigation uses MAG instrument.
+      </p>
+    </div>
 
-  <div class="section">
-    <h2>Research Interests</h2>
-    <!-- creates an unorder list -->
-    <ul>
-      <li>Saturn</li>
-      <li>Literally nothing else.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>Research Interests</h2>
+      <!-- creates an unorder list -->
+      <ul>
+        <li>Saturn</li>
+        <li>Literally nothing else.</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>Recent Publications</h2>
-    <ul>
-      <li>lotr</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>Recent Publications</h2>
+      <ul>
+        <li>lotr</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>Teaching</h2>
-    <ul>
-      <li>May have done some PGTA work once</li>
-      <li>May have done some PGTA work a second time</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>Teaching</h2>
+      <ul>
+        <li>May have done some PGTA work once</li>
+        <li>May have done some PGTA work a second time</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>CV</h2>
-    <!-- slightly different than before, _blank means to open the link in a new tab -->
-    <p><a href="https://archive.org/download/warhammer-40-k-bible/Warhammer%2040K%20Bible.pdf" target="_blank">Download my CV (PDF)</a></p>
-  </div>
+    <div class="section">
+      <h2>CV</h2>
+      <!-- slightly different than before, _blank means to open the link in a new tab -->
+      <p><a href="https://archive.org/download/warhammer-40-k-bible/Warhammer%2040K%20Bible.pdf" target="_blank">Download my CV (PDF)</a></p>
+    </div>
+
+  </text>
+  
 
 </body>
 </html>
