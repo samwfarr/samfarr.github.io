@@ -25,7 +25,7 @@
       padding: 2em;
       line-height: 1.6;
     }
-    text {
+    .text {
       max-width: 800px;
       margin: auto;
     }
@@ -126,7 +126,7 @@
       z-index: -1; /* Push the banner behind everything */
     }
     .backgroundimage {
-      background-image: url('https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpg.jpg');
+      background-image: url('https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -142,7 +142,7 @@
 
   <div class="backgroundimage"></div>
 
-  <text>
+  <div class="text">
 
     <div id="mySidepanel" class="sidepanel">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- defines the close button, java bit says the link doesn't redirect, class is formatting for the close button, closeNAV is the java for animating the window -->
@@ -164,7 +164,7 @@
       }
     </script>
 
-  <!-- defines a section, in this case the first section with titles/photos, styled using the .section ccs to put in in a box -->
+    <!-- defines a section, in this case the first section with titles/photos, styled using the .section ccs to put in in a box -->
     <div class="section">
 
       <!-- add photo from github, formatted using .photo ccs - need to remember to point towards to raw content on github, otherwise just points to github webpage that happens to display the image -->
@@ -220,7 +220,7 @@
       <p><a href="https://archive.org/download/warhammer-40-k-bible/Warhammer%2040K%20Bible.pdf" target="_blank">Download my CV (PDF)</a></p>
     </div>
 
-  </text>
+  </div>
   
 
 </body>
