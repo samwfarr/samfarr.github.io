@@ -46,6 +46,7 @@
       border-radius: 8px;
     }
     /* following are the CCS snippets for formatting the drop out menu */
+    /* this section defines parameters for the closed sidepanel */
     .sidepanel {
       height: 100%;
       width: 0;
@@ -54,17 +55,18 @@
       top: 0;
       left: 0;
       background-color: #111;
-      overflow-x: hidden;
-      padding-top: 60px;
-      transition: 0.1s;
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; 
+      transition: 0.1s; /* Transition effect for opening/closing */
     }
+    /* this section defines CCS formatting for links in the sidepanel */
     .sidepanel a {
-      padding: 8px 8px 8px 32px;
+      padding: 8px 8px 8px 32px; /* Padding for links,  */
       text-decoration: none;
       font-size: 25px;
       color: #818181;
       display: block;
-      transition: 0.3s;
+      transition: 0.1s;
     }
     .sidepanel a:hover {
       color: #f1f1f1;
@@ -87,7 +89,8 @@
       color: white;
       padding: 10px 15px;
       border: none;
-      transition: 0.3s;
+      transition: 0.1s;
+      border-radius: 5px;
     }
 
     .openbtn:hover {
@@ -101,7 +104,7 @@
 <body>
 
   <div id="mySidepanel" class="sidepanel">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- defines the close button, java bit says the link doesn't redirect, class is formatting for the close button, closeNAV is the java for animating the window -->
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="research.html">Research</a>
@@ -109,7 +112,7 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <button class="openbtn" onclick="openNav()">&#9776; Toggle Sidepanel</button>
+  <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
 
   <script>
     function openNav() {
