@@ -12,10 +12,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Summary of webpage content">
   <meta name="author" content="Sam Farr">
+  <!-- attempting to load open sans font from google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
   <!-- defines internal CCS styling, can be combined, say a section of webpage styled by body, with an internal heading coloured by <h1> or 'heading 1' -->
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: 'Open Sans', serif;
       max-width: 800px;
       margin: auto;
       padding: 2em;
@@ -50,8 +53,10 @@
 <body>
 <!-- defines a section, in this case the first section with titles/photos, styled using the .section ccs to put in in a box -->
   <div class="section">
-    <!-- add photo from github, formatted using .photo ccs -->
-    <img src="https://github.com/samwfarr/samfarr.github.io/tree/main/PXL_20250706_105218832.jpg" alt="Image of Sam Farr in a field" class="photo">
+
+    <!-- add photo from github, formatted using .photo ccs - need to remember to point towards to raw content on github, otherwise just points to github webpage that happens to display the image -->
+    <img src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/PXL_20250706_105218832.jpg" alt="Image of Sam Farr in a field" class="photo">
+
     <!-- main heading of my name, formatted with h1 ccs colouring -->
     <h1>Sam Farr</h1>
     <!-- defined new paragraph that's strong/bold to highlight the text -->
@@ -65,7 +70,7 @@
     <h2>About Me</h2>
     <p>
       Auroral emissions and magnetospheric structure. Investigating outer aurorae at Saturn - their dynamics and occurrence with respect to injection signatures in ultraviolet aurorae and ENA. Additionally, I am investigating PPO signatures in southern hemisphere using data gathered during Cassini 'Grand Finale' orbits.
-    </div>p>
+    </p>
     <p>  
       Auroral research involved Cassini UVIS and MMI/INCA instrument usage, with potential for comparison to limited CAPS/ELS electron measurements. PPO investigation uses MAG instrument.
     </p>
