@@ -38,14 +38,14 @@
       left: 40vw;
       width: 50vw;
       padding: 20px;
-      background-color: #008080;
+      /* background-color: #008080; */
     }
     .othercolumn {
       position: absolute;
       left: 10vw;
       width: 35vw;
       padding: 20px;
-      background-color: #008080;
+      /* background-color: #008080; */
       overflow: hidden;
     }
     .content {
@@ -67,6 +67,7 @@
       margin-bottom: 1em;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      z-index: 2
     }
     .photo {
       float: right;
@@ -146,13 +147,31 @@
 <!-- defines the start of the main body of the webpage -->
 <body>
 
-  <div class="background-image"></div>
+  <!-- <img 
+  src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpeg" 
+  alt="Image of Sam Farr in a field" 
+  style="max-width: 100%; height: auto; margin: 0 0 20px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 0"> -->
+
+  <img 
+    src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpeg" 
+    alt="Image of Sam Farr in a field" 
+    style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    ">
+
+      
 
   <div class="othercolumn"> 
   <img 
-    src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/PXL_20250706_105218832.jpg" 
+    src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/PXL_20250321_191024820.jpg" 
     alt="Image of Sam Farr in a field" 
-    style="max-width: 25vw; height: auto; margin: 0 0 20px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: fixed">
+    style="max-width: 25vw; height: auto; margin: 0 0 20px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: fixed; z-index: 1">
 
   </div>
 
@@ -184,7 +203,7 @@
     <div class="section">
 
       <!-- add photo from github, formatted using .photo ccs - need to remember to point towards to raw content on github, otherwise just points to github webpage that happens to display the image -->
-      <img src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/PXL_20250706_105218832.jpg" alt="Image of Sam Farr in a field" class="photo">
+      <!-- <img src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/PXL_20250321_191024820.jpg" alt="Image of Sam Farr in a field" class="photo"> -->
 
       <!-- main heading of my name, formatted with h1 ccs colouring -->
       <h1>Sam Farr</h1>
