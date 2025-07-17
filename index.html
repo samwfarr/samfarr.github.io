@@ -152,7 +152,7 @@
   alt="Image of Sam Farr in a field" 
   style="max-width: 100%; height: auto; margin: 0 0 20px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 0"> -->
 
-  <img 
+  <!-- <img 
     src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpeg" 
     alt="Image of Sam Farr in a field" 
     style="
@@ -163,8 +163,23 @@
       height: 100%;
       object-fit: cover;
       z-index: -1;
-    ">
+    "> -->
 
+  <img 
+    id="scroll-fade-image"
+    src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpeg"
+    alt="Background"
+    style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 1;
+      transition: opacity 0.1s ease-out;
+    ">
       
 
   <div class="othercolumn"> 
@@ -256,7 +271,20 @@
     </div>
 
   </div>
-  
+
+  <script>
+  window.addEventListener('scroll', function () {
+    const image = document.getElementById('scroll-fade-image');
+    const scrollTop = window.scrollY || window.pageYOffset;
+    const fadePoint = 300; // start fading after this many pixels
+
+    // Calculate opacity (1 at top, 0 at or beyond fadePoint)
+    let opacity = 1 - (scrollTop / fadePoint);
+    opacity = Math.max(opacity, 0); // Never less than 0
+
+    image.style.opacity = opacity;
+  });
+  </script>
 
 </body>
 </html>
