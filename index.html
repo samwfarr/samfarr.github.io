@@ -22,24 +22,20 @@
       font-family: 'Open Sans', sans-serif;
       padding: 2em;
       line-height: 1.6;
+    }
 
-      /* font-family: 'Open Sans', sans-serif;
-      line-height: 1.6;
-      background-image: url('https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      margin: 0;
-      padding: 2em; */
-    }
     .text {
-      position: absolute;
-      left: 10vw;
-      width: 80vw;
+      position: fixed;        /* stays in place while scrolling */
+      bottom: 10vw;           /* distance from bottom of the viewport */
+      right: 10vw;            /* distance from right of the viewport */
+      width: 80vw;           /* or any fixed width, or use vw for responsiveness */
+      top: 20vh;
       padding: 20px;
-      /* background-color: #008080; */
+      border-radius: 8px;
+      color: black;           /* text color */
+      z-index: 10;          /* stays above other content */
     }
+
     .profilepicture {
       position: fixed; 
       bottom: 2vh; /* 2% from bottom */
@@ -51,6 +47,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
       overflow: hidden;
+      z-index: 20;
     }
     .content {
       background: #F2BFA4;
@@ -87,70 +84,32 @@
       border-radius: 8px;  /* optional rounded corners */
     }
 
-    /* following are the CCS snippets for formatting the drop out menu */
-    /* this section defines parameters for the closed sidepanel */
-    .sidepanel {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
+
+    .topnav {
+      background-color: rgba(red, green, blue, 0.5);   /* dark background */
+      overflow: hidden;         /* clears floats */
+      position: fixed;          /* sticks to top */
       top: 0;
       left: 0;
-      background-color: #111;
-      overflow-x: hidden; /* Disable horizontal scroll */
-      padding-top: 60px; 
-      transition: 0.3s; /* Transition effect for opening/closing */
+      width: 100%;              /* full width */
+      z-index: 1000;            /* stays above other content */
     }
-    /* this section defines CCS formatting for links in the sidepanel */
-    .sidepanel a {
-      padding: 8px 8px 8px 32px; /* Padding for links,  */
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
+
+    .topnav a {
+      float: left;              /* horizontal row */
       display: block;
-      transition: 0.1s;
-    }
-    .sidepanel a:hover {
-      color: #f1f1f1;
-    }
-    .sidepanel .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-      cursor: pointer;
-    }
-    .openbtn {
-      position: fixed;
-      top: 10px;           
-      left: 10px;         
-      font-size: 20px;
-      cursor: pointer;
-      background-color: #111;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      transition: 0.1s;
-      border-radius: 5px;
+      color: white;             /* link color */
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;    /* removes underline */
+      font-weight: bold;
     }
 
-    .openbtn:hover {
-      background-color: #444;
+    .topnav a:hover {
+      background-color: #575757; /* hover effect */
+      color: #fff;
     }
 
-    .background-image {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: -1; /* Behind everything */
-    }
   </style>
 </head>
 <!-- above sections are just closing the style and head sections -->
@@ -159,33 +118,27 @@
 <!-- defines the start of the main body of the webpage -->
 <body>
 
-  <!-- <img 
-  src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpeg" 
-  alt="Image of Sam Farr in a field" 
-  style="max-width: 100%; height: auto; margin: 0 0 20px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 0"> -->
 
-  <!-- <img 
-    src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpeg" 
-    alt="Image of Sam Farr in a field" 
-    style="
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    "> -->
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-      
-
-  <div class="photo"> 
   <img 
     src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/PXL_20250831_102132248_boat.jpg" 
-    alt="Image of Sam Farr in a boat" 
-    style="max-width: 25vw; height: auto; margin: 0 0 20px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: fixed; z-index: 1">
-
-  </div>
+    alt="Image of Sam Farr in a boat"
+    style="
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      max-width: 25vw;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      z-index: 1000;
+  ">
 
   <div class="logo"> 
   <img 
@@ -195,29 +148,7 @@
 
   </div>
 
-
-
   <div class="text">
-
-    <div id="mySidepanel" class="sidepanel">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- defines the close button, java bit says the link doesn't redirect, class is formatting for the close button, closeNAV is the java for animating the window -->
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="research.html">Research</a>
-      <a href="cv.html">CV</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
-
-    <script>
-      function openNav() {
-        document.getElementById("mySidepanel").style.width = "250px";
-      }
-      function closeNav() {
-        document.getElementById("mySidepanel").style.width = "0";
-      }
-    </script>
 
     <!-- defines a section, in this case the first section with titles/photos, styled using the .section ccs to put in in a box -->
     <div class="section">
@@ -235,61 +166,9 @@
       <p>Orcid Profile: <a href="https://orcid.org/0009-0007-7160-8848">https://orcid.org/0009-0007-7160-8848</a></p>
     </div>
 
-    <div class="section">
-      <h2>About Me</h2>
-      <p>
-        Auroral emissions and magnetospheric structure. Investigating outer aurorae at Saturn - their dynamics and occurrence with respect to injection signatures in ultraviolet aurorae and ENA. Additionally, I am investigating PPO signatures in southern hemisphere using data gathered during Cassini 'Grand Finale' orbits.
-      </p>
-      <p>  
-        Auroral research involved Cassini UVIS and MMI/INCA instrument usage, with potential for comparison to limited CAPS/ELS electron measurements. PPO investigation uses MAG instrument.
-      </p>
-    </div>
 
-    <div class="section">
-      <h2>Research Interests</h2>
-      <!-- creates an unorder list -->
-      <ul>
-        <li>Saturn</li>
-        <li>Literally nothing else.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Recent Publications</h2>
-      <ul>
-        <li>lotr</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Teaching</h2>
-      <ul>
-        <li>May have done some PGTA work once</li>
-        <li>May have done some PGTA work a second time</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>CV</h2>
-      <!-- slightly different than before, _blank means to open the link in a new tab -->
-      <p><a href="https://archive.org/download/warhammer-40-k-bible/Warhammer%2040K%20Bible.pdf" target="_blank">Download my CV (PDF)</a></p>
-    </div>
 
   </div>
-
-  <script>
-  window.addEventListener('scroll', function () {
-    const image = document.getElementById('scroll-fade-image');
-    const scrollTop = window.scrollY || window.pageYOffset;
-    const fadePoint = 300; // start fading after this many pixels
-
-    // Calculate opacity (1 at top, 0 at or beyond fadePoint)
-    let opacity = 1 - (scrollTop / fadePoint);
-    opacity = Math.max(opacity, 0); // Never less than 0
-
-    image.style.opacity = opacity;
-  });
-  </script>
 
 </body>
 </html>
