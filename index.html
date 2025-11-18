@@ -35,17 +35,21 @@
     }
     .text {
       position: absolute;
-      left: 40vw;
-      width: 50vw;
+      left: 10vw;
+      width: 80vw;
       padding: 20px;
       /* background-color: #008080; */
     }
-    .othercolumn {
-      position: absolute;
-      left: 10vw;
-      width: 35vw;
-      padding: 20px;
-      /* background-color: #008080; */
+    .profilepicture {
+      position: fixed; 
+      bottom: 2vh; /* 2% from bottom */
+      right: 2vh;
+      width: 30vw;
+      max-width: 400px;
+      padding: 10px;
+      background: #f0f0f0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
       overflow: hidden;
     }
     .content {
@@ -75,6 +79,14 @@
       max-width: 150px;
       border-radius: 8px;
     }
+    .logo {
+      position: absolute;  /* remove from normal flow */
+      top: 20px;           /* distance from top */
+      right: 20px;         /* distance from right */
+      max-width: 150px;    /* keeps logo from being too big */
+      border-radius: 8px;  /* optional rounded corners */
+    }
+
     /* following are the CCS snippets for formatting the drop out menu */
     /* this section defines parameters for the closed sidepanel */
     .sidepanel {
@@ -165,27 +177,20 @@
       z-index: -1;
     "> -->
 
-  <img 
-    id="scroll-fade-image"
-    src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/20130722_annotated_earth-moon_from_saturn_1920x1080_1_2-transformed.jpeg"
-    alt="Background"
-    style="
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      opacity: 1;
-      transition: opacity 0.1s ease-out;
-    ">
       
 
-  <div class="othercolumn"> 
+  <div class="photo"> 
   <img 
-    src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/PXL_20250321_191024820.jpg" 
-    alt="Image of Sam Farr in a field" 
+    src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/PXL_20250831_102132248_boat.jpg" 
+    alt="Image of Sam Farr in a boat" 
+    style="max-width: 25vw; height: auto; margin: 0 0 20px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: fixed; z-index: 1">
+
+  </div>
+
+  <div class="logo"> 
+  <img 
+    src="https://raw.githubusercontent.com/samwfarr/samfarr.github.io/main/unilogowin.jpg" 
+    alt="University of Lancaster Logo" 
     style="max-width: 25vw; height: auto; margin: 0 0 20px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: fixed; z-index: 1">
 
   </div>
